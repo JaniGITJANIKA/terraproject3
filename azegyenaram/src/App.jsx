@@ -17,6 +17,7 @@ function Header() {
 function Nav() {
   return (
     <div className='nav'>
+      <svg width="21" height="20" aria-hidden="true"><use href="/icons.svg#documentation-icon" /></svg>
       <Link className='link' to="/">Árramerrőség</Link>
       <Link className='link' to="/feszultseg">Feszültség</Link>
       <Link className='link' to="/teljesitmeny">Teljesímény</Link>
@@ -29,6 +30,7 @@ function Nav() {
 function Aramereroseg() {
   return (
     <div className='pageanimation'>
+    <Topimg link="aramerroseg.jpeg" name="Ez egy kép az áramerrőségről." />
       <h2>Az eletromos áram és áramerősség (I)</h2>
       <h3>Elmélet és alapfogalmak</h3>
       <ul>
@@ -102,6 +104,7 @@ function Testmath({amper, setamper, watt, setwatt}) {
 function Feszultseg() {
   return (
     <div className='pageanimation'>
+    <Topimg link="feszultseg.jpeg" name="Ez egy kép a feszültségről." />
     <h2>Feszültség (U) és Ohm-törvény (R) - Az Ellenállás</h2>
     <h3>Elmélet és Mértékegységek</h3>
     <ul>
@@ -196,6 +199,7 @@ function Iur({ volt, setvolt, ohm, setohm, amper, setamper }) {
 function Teljesitmeny() {
   return (
     <div className='pageanimation'>
+      <Topimg link="teljesitmeny.jpeg" name="Áramkörök kép." />
       <h2>Elektromos Munkavégzés(W) és Teljesítmény (p) - A Watt és Joule</h2>
       <h3>Elmélet és alapfogalmak és Mértékegységek</h3>
       <ul>
@@ -314,6 +318,7 @@ function Wuq({watt, setwatt, volt, setvolt, q, setq, amper, setamper, time, sett
 function Aramkorok() {
   return (
   <div className='pageanimation'>
+    <Topimg link="aramkorok.jpeg" name="Ez egy kép az áram körökről." />
     <h2>Áramkörök és Kapcsolási Módok</h2>
     <ol>
       <li><b>Soros Kapcsolás</b>
@@ -362,10 +367,19 @@ function Iii({amper, setamper, volt, setvolt}) {
   
 }
 
+function Topimg({link, name}) {
+  return (
+    <div>
+    <img className='topimg' src={link} alt={name} title={name} />
+    </div>
+  );
+}
+
 function Koszonom() {
   return (
     <div className='pageanimation'>
       <h1>Köszönöm szépen a figyelmet és hogy megnézte a React kódban készített webolamat.</h1>
+      <Topimg link="like.jpeg" name="Ez egy likolo emojis kép." />
     </div>
   );
 }
