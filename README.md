@@ -20,6 +20,9 @@ Az alkalmazás jelenlegi változata frontend-only: nem használ adatbázist vagy
 
 A verzió ellenőrzése terminálban:
 
+## Test link
+- https://janigitjanika.github.io/terraproject3/
+
 ```bash
 node --version
 npm --version
